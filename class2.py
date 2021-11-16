@@ -16,4 +16,6 @@ p1.name = "전우치"
 p2 = Person()
 p1.print()
 p2.print() 
+p3 = Person() 
+print("인스턴스 갯수:{0}".format(Person.num_person))
 
