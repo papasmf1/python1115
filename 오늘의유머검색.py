@@ -11,10 +11,9 @@ hdr = {'User-agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) Appl
 for n in range(1,11):
         #클리앙의 중고장터 주소 
         data ='http://www.todayhumor.co.kr/board/list.php?table=bestofbest&page=' + str(n)
-        print( data )
+        
         #웹브라우져 헤더 추가 
-        req = urllib.request.Request(data, \
-                                    headers = hdr)
+        req = urllib.request.Request(data, headers = hdr)
         data = urllib.request.urlopen(req).read()
         #국내 커뮤니티는 대부분 utf-8 
         page = data.decode('utf-8', 'ignore')
