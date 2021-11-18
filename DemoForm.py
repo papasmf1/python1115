@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic 
 
 #화면을 로딩
-form_class = uic.loadUiType("DemoForm.ui")[0]
+form_class = uic.loadUiType("c:\\work\\DemoForm.ui")[0]
 
 #폼클래스(윈도우)를 정의
 class DemoForm(QDialog, form_class):
@@ -14,11 +14,11 @@ class DemoForm(QDialog, form_class):
         self.setupUi(self) 
         self.label.setText("첫번째 데모")
 
-#진입점을 체크
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    demoWindow = DemoForm()
-    demoWindow.show() 
-    app.exec_() 
+#인스턴스를 생성 
+app = QApplication(sys.argv)
+demoWindow = DemoForm()
+demoWindow.show() 
+app.exec_() 
+
 
 
