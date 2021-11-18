@@ -14,10 +14,15 @@ soup = BeautifulSoup(data, "html.parser")
 cartoons = soup.find_all("td", class_="title")
 
 print("갯수:{0}".format(len(cartoons)))
-title = cartoons[0].find(a).text
-link = cartoons[0].find(a)["href"]
+#10개중에 0번을 찾아서 다시 검색 ==> 문자열 리턴 
+title = cartoons[0].find("a").text
+link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
+
+for item in cartoons:
+    title = item.find("a").text 
+    print( title.strip() )
 
 
                         
