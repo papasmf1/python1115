@@ -34,5 +34,7 @@ cur.execute("select * from PhoneBook;")
 print( cur.fetchall() )
 
 #지금 상태는 전부 롤백(취소)
+#입력, 수정, 삭제작업을 완료한 경우(작업 완료)
+con.commit() 
 
 
