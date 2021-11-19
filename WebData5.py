@@ -29,8 +29,8 @@ class Form(QMainWindow):
         self.tableWidget.setRowCount(50)  #행의 갯수 
         self.tableWidget.setColumnCount(2)  #컬럼의 갯수 
         #컬럼의 폭을 지정한다. 0번 1번 
-        self.tableWidget.setColumnWidth(0, 300)
-        self.tableWidget.setColumnWidth(1, 300)
+        self.tableWidget.setColumnWidth(0, 400)
+        self.tableWidget.setColumnWidth(1, 200)
         
         #self.setTableWidgetData()
         self.tableWidget.doubleClicked.connect(self.doubleClicked)
@@ -74,6 +74,7 @@ class Form(QMainWindow):
             f.close()
 
     def doubleClicked(self):
+        #주소가 숨겨져 있다. 
         url = self.tableWidget.item(self.tableWidget.currentRow(), 1).text()
         webbrowser.open(url) 
 
